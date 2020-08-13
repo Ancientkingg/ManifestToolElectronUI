@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R6Downloader</title>
+  <link rel="stylesheet" href= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+</head>
+<body style="background-color:rgb(32, 29, 61);">
+  <nav>
+    <nav class="navbar navbar-dark bg-dark"> 
+      <a class="navbar-brand " href="#"> 
+        R6Downloader
+    </a> 
+  </nav> 
+    <style>
+      .zoom {
+        
+        padding: 50px;
+        background-color: darkblue;
+        background-image: url('./images/blackice.jpg');
+        transition: transform .2s; /* Animation */
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position:relative;
+      }
+      
+      .zoom:hover {
+        transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            filter: blur(3px);
+            }
+      </style>
+      
+      <div class="zoom" onclick="startdownload()"></div>
+      <style>
+        .zoom2 {
+          padding: 50px;
+          background-color: burlywood;
+          background-image: url('./images/dustline.jpg');
+          transition: transform .2s; /* Animation */
+          background-size:contain;
+          background-repeat:no-repeat;
+          background-position:relative;
+        }
+        
+        .zoom2:hover {
+          transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+          filter: blur(3px);
+        }
+        </style>
+        
+        <div class="zoom2" onclick="console.log('Click on dustline')"></div>
+        <style>
+          .zoom3 {
+            padding: 50px;
+            background-color: darkgreen;
+            background-image: url('./images/skullrain.png');
+            transition: transform .2s; /* Animation */
+            background-size:contain;
+            background-repeat:no-repeat;
+            background-position:relative;
+            max-width: 800px
+          }
+          
+          .zoom3:hover {
+            transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            filter: blur(3px);
+          }
+          </style>
+          
+          <div class="zoom3" onclick="console.log('Click on skullrain')"></div>
+          <style>
+            .zoom4 {
+              padding: 50px;
+              background-color: red;
+              background-image: url('./images/redcrow.jpg');
+              transition: transform .2s; /* Animation */
+              background-size:contain;
+              background-repeat:no-repeat;
+              background-position:relative;
+              max-width: 800px
+            }
+            
+            .zoom4:hover {
+              transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            filter: blur(3px);
+            }
+            </style>
+            
+            <div class="zoom4" onclick="console.log('Click on redcrow')"></div>
+            <style>
+              .zoom5 {
+                padding: 50px;
+                background-color: purple;
+                background-image: url('./images/velvetshell.jpg');
+                transition: transform .2s; /* Animation */
+                background-size:contain;
+                background-repeat:no-repeat;
+                background-position:relative;
+                max-width: 800px
+              }
+              
+              .zoom5:hover {
+                transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+                    filter: blur(3px);
+                    }
+              </style>
+              
+              <div class="zoom5" onclick="console.log('Click on velvetshell')"></div>
+              <style>
+                .zoom6 {
+                  padding: 50px;
+                  background-color: lightblue;
+                  background-image: url('./images/health.jpg');
+                  transition: transform .2s; /* Animation */
+                  background-size:contain;
+                  background-repeat:no-repeat;
+                  background-position:relative;
+                  max-width: 800px
+                }
+                
+                .zoom6:hover {
+                  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+                  filter: blur(3px);
+                }
+                </style>
+                
+                <div class="zoom6" onclick="console.log('Click on Health')"></div>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                  .zoom7 {
+                    padding: 50px;
+                    background-color: darkred;
+                    background-image: url('./images/bloodorchid.jpg');
+                    transition: transform .2s; /* Animation */
+                    background-size:contain;
+                    background-repeat:no-repeat;
+                    background-position:relative;
+                    position: relative;
+                    max-width: 800px
+                  }
+                  
+                  .zoom7:hover {
+                    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+                    filter: blur(3px);
+                  }
+                  </style>
+                  
+                  <div class="zoom7" onclick="console.log('Click on bloodorchid')"></div>
+                  <style>
+                    .zoom8 {
+                      transition: transform .2s; /* Animation */
+                      padding: 50px;
+                      background-image: url(images/whitenoise.jpg);
+                      background-size:contain;
+                      background-repeat:no-repeat;
+                      background-position:relative;
+                      color: pink;
+                      max-width: 800px
+                    }
+                    
+                    .zoom8:hover {
+                      transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+                    filter: blur(3px);
+                    }
+                    </style>
+                    
+                    <div class="zoom8" onclick="console.log('Click on whitenoise')"></div>
+  </nav>
+  <hr>
+  <textarea rows="20" cols="112" id="command-output" disabled="true" style="background-color:rgb(68, 58, 160);"></textarea>
+  <div id="status"></div>
+    <hr>
+  <script src="./cmd.js"></script>
+    <script>
+        // GLUE to the screen
+        function getCommandOutput() { return document.getElementById("command-output");  };
+        function getStatus()      { return document.getElementById("status");  };
+        // End of GLUE
+        function startdownload() {
+          backgroundProcess()
+        }
+
+    </script>
+</body>
+</html>
