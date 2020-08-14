@@ -1,7 +1,6 @@
 const remote = require('electron').remote;
 
-const win = remote.getCurrentWindow(); /* Note this is different to the
-html global `window` variable */
+const win = remote.getCurrentWindow();
 
 // When document has loaded, initialise
 document.onreadystatechange = (event) => {
@@ -11,9 +10,6 @@ document.onreadystatechange = (event) => {
 };
 
 window.onbeforeunload = (event) => {
-    /* If window is reloaded, remove win event listeners
-    (DOM element listeners get auto garbage collected but not
-    Electron win listeners as the win is not dereferenced unless closed) */
     win.removeAllListeners();
 }
 

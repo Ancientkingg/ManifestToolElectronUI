@@ -1,31 +1,65 @@
 @import "font/fonts.css";
 
-*  {
+@font-face {
+    font-family: 'akashiregular';
+    src: url('akashi-webfont.woff2') format('woff2'),
+         url('akashi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+  *  {
     margin: 0;
     padding: 0;
 }
 
+#frontmenu {
+  font-family: "Segoe UI", sans-serif;
+  background: rgb(161,115,23);
+  background: linear-gradient(3deg, rgba(161,115,23,1) 19%, rgba(27,107,100,1) 99%);
+}
+
+nav {
+    width: 400px;
+    margin: auto;
+    position: relative;
+    top: 435px;
+}
+
 kingg {
-    list-style: none;
+    margin: auto;
+    width: 300px;
 }
 
 kingg menu {
     list-style: none;
+    line-height: 70px;
+    text-align: center;
 }
 
 kingg menu a {
-    font-family: 'Gill Sans Nova Light';
-    font-size: 30px;
-    font-weight: 700;
+    background: rgb(142, 142, 255);
+    font-family: 'akashiregular';
+    font-size: 55px;
+    font-weight: 100px;
+    text-align: center;
     text-decoration: none;
-    transition: all 100ms;
-    color: #20a000
-    position: relative;
-    left: 500;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 0 20px;
+    transition: background 800ms, font-size 150ms;
 }
 
 kingg menu a:hover {
-    color: rgba(251, 255, 0, 0.933)
+    font-size: 75px;
+    background: rgb(15, 224, 161);
+  }
+
+  #logo {
+    /* border: 1px solid #ddd; */
+    position: relative;
+    bottom: 50px;
   }
 
 
