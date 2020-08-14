@@ -1,0 +1,31 @@
+@import "font/fonts.css";
+
+*  {
+    margin: 0;
+    padding: 0;
+}
+
+kingg {
+    list-style: none;
+}
+
+kingg menu {
+    list-style: none;
+}
+
+kingg menu a {
+    font-family: 'Gill Sans Nova Light';
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 100ms;
+    color: #20a000
+    position: relative;
+    left: 500;
+}
+
+kingg menu a:hover {
+    color: rgba(251, 255, 0, 0.933)
+  }
+
+

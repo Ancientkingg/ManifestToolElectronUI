@@ -13,8 +13,15 @@ let addWindow;
 
 app.on('ready', function(){
   mainWindow = new BrowserWindow({
-    width: 800,
-    height:600
+    width: 1000,
+    height:700,
+    minWidth: 1000,
+    minHeight:700,
+    frame:false,
+    backgroundColor: '#FFF',
+        webPreferences: {
+            nodeIntegration: true
+        }
   });
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'mainWindow.html'),
@@ -31,8 +38,11 @@ app.on('ready', function(){
 
 function createAddWindow(){
   addWindow = new BrowserWindow({
-    width: 300,
-    height:200,
+    minHeight:700,
+    minWidth: 1200,
+    width: 1200,
+    height:700,
+    frame:false,
     title:'PlaceholderName'
   });
   addWindow.loadURL(url.format({

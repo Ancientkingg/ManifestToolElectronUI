@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>R6Downloader</title>
-  <link rel="stylesheet" href= 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="font/fonts.css" />
+ <link rel="stylesheet" href= 
 "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
 </head>
-<body style="background-color:rgb(32, 29, 61);">
-  <nav>
+<body style="background-color:rgb(43, 38, 94);" >
+
+<header id="titlebar">
+    <div id="drag-region">
+
+      <div id="window-title">
+        <span id="titlename">
+          Manifest Tool
+        </span>
+      </div>
+
+      <div id="window-controls">
+
+        <div class="button" id="min-button">
+          <img class="icon" srcset="icons/min-w-10.png 1x, icons/min-w-12.png 1.25x, icons/min-w-15.png 1.5x, icons/min-w-15.png 1.75x, icons/min-w-20.png 2x, icons/min-w-20.png 2.25x, icons/min-w-24.png 2.5x, icons/min-w-30.png 3x, icons/min-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="button" id="max-button">
+          <img class="icon" srcset="icons/max-w-10.png 1x, icons/max-w-12.png 1.25x, icons/max-w-15.png 1.5x, icons/max-w-15.png 1.75x, icons/max-w-20.png 2x, icons/max-w-20.png 2.25x, icons/max-w-24.png 2.5x, icons/max-w-30.png 3x, icons/max-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="button" id="restore-button">
+          <img class="icon" srcset="icons/restore-w-10.png 1x, icons/restore-w-12.png 1.25x, icons/restore-w-15.png 1.5x, icons/restore-w-15.png 1.75x, icons/restore-w-20.png 2x, icons/restore-w-20.png 2.25x, icons/restore-w-24.png 2.5x, icons/restore-w-30.png 3x, icons/restore-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="button" id="close-button">
+          <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div id="main">
     <nav class="navbar navbar-dark bg-dark"> 
       <a class="navbar-brand " href="#"> 
         R6Downloader
@@ -14,14 +44,14 @@
   </nav> 
     <style>
       .zoom {
-        
         padding: 50px;
         background-color: darkblue;
         background-image: url('./images/blackice.jpg');
         transition: transform .2s; /* Animation */
-        background-size:contain;
+        background-size:cover;
         background-repeat:no-repeat;
         background-position:relative;
+        max-width: 800px;
       }
       
       .zoom:hover {
@@ -37,9 +67,10 @@
           background-color: burlywood;
           background-image: url('./images/dustline.jpg');
           transition: transform .2s; /* Animation */
-          background-size:contain;
+          background-size:cover;
           background-repeat:no-repeat;
           background-position:relative;
+          max-width: 800px;
         }
         
         .zoom2:hover {
@@ -55,10 +86,10 @@
             background-color: darkgreen;
             background-image: url('./images/skullrain.png');
             transition: transform .2s; /* Animation */
-            background-size:contain;
+            background-size:cover;
             background-repeat:no-repeat;
             background-position:relative;
-            max-width: 800px
+            max-width: 800px;
           }
           
           .zoom3:hover {
@@ -74,7 +105,7 @@
               background-color: red;
               background-image: url('./images/redcrow.jpg');
               transition: transform .2s; /* Animation */
-              background-size:contain;
+              background-size:cover;
               background-repeat:no-repeat;
               background-position:relative;
               max-width: 800px
@@ -93,7 +124,7 @@
                 background-color: purple;
                 background-image: url('./images/velvetshell.jpg');
                 transition: transform .2s; /* Animation */
-                background-size:contain;
+                background-size:cover;
                 background-repeat:no-repeat;
                 background-position:relative;
                 max-width: 800px
@@ -112,7 +143,7 @@
                   background-color: lightblue;
                   background-image: url('./images/health.jpg');
                   transition: transform .2s; /* Animation */
-                  background-size:contain;
+                  background-size:cover;
                   background-repeat:no-repeat;
                   background-position:relative;
                   max-width: 800px
@@ -132,7 +163,7 @@
                     background-color: darkred;
                     background-image: url('./images/bloodorchid.jpg');
                     transition: transform .2s; /* Animation */
-                    background-size:contain;
+                    background-size:cover;
                     background-repeat:no-repeat;
                     background-position:relative;
                     position: relative;
@@ -151,7 +182,7 @@
                       transition: transform .2s; /* Animation */
                       padding: 50px;
                       background-image: url(images/whitenoise.jpg);
-                      background-size:contain;
+                      background-size:cover;
                       background-repeat:no-repeat;
                       background-position:relative;
                       color: pink;
@@ -166,6 +197,7 @@
                     
                     <div class="zoom8" onclick="console.log('Click on whitenoise')"></div>
   </nav>
+</div>
   <hr>
   <textarea rows="20" cols="112" id="command-output" disabled="true" style="background-color:rgb(68, 58, 160);"></textarea>
   <div id="status"></div>
@@ -180,6 +212,9 @@
           backgroundProcess()
         }
 
+    </script>
+    <script>
+      require('./renderer.js')
     </script>
 </body>
 </html>
