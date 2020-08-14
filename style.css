@@ -1,15 +1,13 @@
 /* Basic styling */
 @font-face {
-  font-family: 'ambleregular';
-  src: url('Amble-Regular-webfont.eot');
-  src: url('Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('Amble-Regular-webfont.woff2') format('woff2'),
-       url('Amble-Regular-webfont.woff') format('woff'),
-       url('Amble-Regular-webfont.ttf') format('truetype'),
-       url('Amble-Regular-webfont.svg#ambleregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-
+	font-family: 'r6s';
+	src: url('fonts/ScoutCond-Black.eot');
+	src: local('☺'), url('fonts/ScoutCond-Black.woff') format('woff'), url('fonts/ScoutCond-Black.ttf') format('truetype'), url('fonts/ScoutCond-Black.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-size: 20px;
+	text-align: center;
+	line-height:100px;
 }
 
 
@@ -20,7 +18,7 @@ html, body {height: 100%; margin: 0;}
 
 #downloadmenu {
   font-family: "Segoe UI", sans-serif;
-  background: #ff0000;
+  background: #212450;
   color: #FFF;
 }
 
@@ -67,7 +65,7 @@ body {
 	font-style: normal;
 	font-size: 2px;
 	text-align: center;
-	line-height:100px;
+  line-height:100px;
 }
 
 #titlebar #drag-region {
@@ -92,11 +90,11 @@ body {
   margin-left: 8px;
   overflow: hidden;
   font-family: "Segoe UI", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .maximized #window-title {
-  margin-left: 1px;
+  margin-left: 8px;
 }
 
 #window-title span {
