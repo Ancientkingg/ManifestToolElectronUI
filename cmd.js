@@ -15,16 +15,23 @@ function backgroundProcess() {
     const process = require('child_process');   // The power of Node.JS
 
     showOS();
-    var cmd = (is.windows()) ? 'test.bat' : './test.sh';      
+    var cmd = (is.windows()) ? 'dotnet DepotDownloader.dll -app 359550 -depot 377237 -manifest 299124516841461614 -username ancientkinggg -password WitBrood12#  -remember-password -dir "Downloads/test" -validate -max-servers 15 -max-downloads 10' : './test.sh';      
     console.log('cmd:', cmd);
         
-    var child = process.spawn(cmd); 
+    var child = process.exec(cmd); 
+
 
     child.on('error', function(err) {
       appendOutput('stderr: <'+err+'>' );
     });
 
     child.stdout.on('data', function (data) {
+      console.log(JSON.stringify(data.toString()));
+      if(data.toString().startsWith("This account is protected by Steam Guard.")){
+        console.log('say hi')
+        child.stdin.write(prompt("gimme 2fa token noooow!"));
+        console.log('say test')
+      }
       appendOutput(data);
     });
 
