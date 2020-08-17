@@ -197,11 +197,23 @@
                     
                     <div class="zoom8" onclick="console.log('Click on whitenoise')"></div>
   </nav>
+  <script>
+    function validateForm(event) {
+      event.preventDefault()
+      var x = document.forms["myForm"]["fname"].value;
+      const data = new FormData(event.Target)
+      console.log(x)
+      if (x == "") {
+        return false;
+      }
+}
+  </script>
+  <form name="myForm" onsubmit="validateForm(event)">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+  </form>
 </div>
-  <hr>
-  <textarea rows="20" cols="112" id="command-output" disabled="true" style="background-color:rgb(68, 58, 160);"></textarea>
-  <div id="status"></div>
-    <hr>
+
   <script src="./cmd.js"></script>
     <script>
         // GLUE to the screen

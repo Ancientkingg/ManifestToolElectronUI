@@ -27,9 +27,9 @@ function backgroundProcess() {
 
     child.stdout.on('data', function (data) {
       console.log(JSON.stringify(data.toString()));
-      if(data.toString().startsWith("This account is protected by Steam Guard.")){
+      if(data.toString().startsWith("Disconnected from Steam\r\nThis account is protected by Steam Guard.\r\nPlease enter your 2 factor auth code from your authenticator app")){
         console.log('say hi')
-        child.stdin.write(prompt("gimme 2fa token noooow!"));
+        // child.stdin.write(prompt("gimme 2fa token noooow!"));
         console.log('say test')
       }
       appendOutput(data);
