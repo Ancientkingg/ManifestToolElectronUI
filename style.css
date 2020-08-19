@@ -83,11 +83,32 @@ body {
   grid-template-columns: auto 138px;
 }
 
-input[type=text] {
-  width: 100%;
+input[type=text]:empty {
+  width: 10%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  border-radius: 20px;
+  background: rgb(76,255,0);
+  background: linear-gradient(90deg, rgba(76,255,0,1) 0%, rgba(0,212,255,1) 100%);
+  transition: width 800ms;
+  outline: none;
+}
+
+input[type=text]:hover {
+  width: 20%;
+}
+
+input[type=text]:placeholder-shown {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: rgb(76,255,0);
+  background: linear-gradient(90deg, rgba(76,255,0,1) 0%, rgba(0,212,255,1) 100%);
+  transition: width 800ms;
+  outline: none;
 }
 
 #window-title {
