@@ -1,14 +1,20 @@
 var is = require("electron-is");
 function setStatus(msg)    { getStatus().innerHTML = msg; };
+var x;
+
 
 function validateForm(event) {
   event.preventDefault()
-  var x = document.forms["credentials"]["username"].value;
+  x = document.forms["credentials"]["username"].value;
   const data = new FormData(event.Target)
-  console.log(x)
+  console.log(`Hello ${x}`)
   if (x == "") {
     return false;
   }
+}
+
+function TestCMD() {
+  console.log(x)
 }
 
 function startDownload() {
