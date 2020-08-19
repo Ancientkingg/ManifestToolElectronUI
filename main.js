@@ -11,7 +11,6 @@ const {app, BrowserWindow, Menu, ipcMain} = electron;
 let mainWindow;
 let addWindow;
 
-
 app.on('ready', function(){
   mainWindow = new BrowserWindow({
     width: 1000,

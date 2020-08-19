@@ -60,7 +60,7 @@
             }
       </style>
       
-      <div class="zoom" onclick="startdownload()"></div>
+      <div class="zoom" onclick="startDownload()"></div>
       <style>
         .zoom2 {
           padding: 50px;
@@ -195,29 +195,16 @@
                     }
                     </style>
                     
-                    <div class="zoom8" onclick="console.log('Click on whitenoise')"></div>
+                    <div class="zoom8" onclick="validateForm(event)"></div>
   </nav>
-  <script>
-    function validateForm(event) {
-      event.preventDefault()
-      var x = document.forms["myForm"]["fname"].value;
-      const data = new FormData(event.Target)
-      console.log(x)
-      if (x == "") {
-        return false;
-      }
-}
-  </script>
-  <form name="myForm" onsubmit="validateForm(event)">
-    Name: <input type="text" name="fname">
-    <input type="submit" value="Submit">
+  <form name="credentials">
+    Name: <input type="text" name="username">
   </form>
 </div>
 
   <script src="./cmd.js"></script>
     <script>
-        // GLUE to the screen
-        function getCommandOutput() { return document.getElementById("command-output");  };
+              function getCommandOutput() { return document.getElementById("command-output");  };
         function getStatus()      { return document.getElementById("status");  };
         // End of GLUE
         function startdownload() {
