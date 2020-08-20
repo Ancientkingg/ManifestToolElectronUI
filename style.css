@@ -184,9 +184,10 @@ body {
   padding: 50px;
   transition: transform .2s; /* Animation */
   background-size:cover;
+  object-fit: cover;
   background-repeat:no-repeat;
-  background-position:relative;
-  max-width: 800px;
+  background-position:center;
+  max-width: 200px;
 }
 
 .zoom:hover {
