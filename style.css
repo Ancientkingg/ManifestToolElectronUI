@@ -18,7 +18,7 @@ html, body {height: 100%; margin: 0;}
 
 #downloadmenu {
   font-family: "Segoe UI", sans-serif;
-  background: #212450;
+  background: #000000;
   color: #FFF;
 }
 
@@ -229,7 +229,7 @@ input[type=text] {
   border-radius: 20px;
   /* background: rgb(76,255,0);
   background: linear-gradient(90deg, rgba(76,255,0,1) 0%, rgba(0,212,255,1) 100%); */
-  background: black;
+  background: rgb(22, 22, 22);
   transition: width 800ms;
   outline: none;
   color: green;
