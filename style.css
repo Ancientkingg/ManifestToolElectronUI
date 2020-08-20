@@ -190,6 +190,31 @@ body {
   max-width: 200px;
 }
 
+#season {
+  transition:transform 300ms;
+  border-color: rgba(0, 255, 0, 255);
+  background-color: rgba(0,255,0,255);
+  width: 75px;
+  height: 64px;
+}
+
+.seasoninfo {
+  color: rgba(0, 0, 0, 0);
+  transition: color 200ms, background-color 200ms;
+  background-color: rgba(0,0,0,0);
+  width: 80px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.season:hover .seasoninfo{
+  color: rgba(0,0,0,255);
+  background-color: #ff0000;
+}
+
+.season:hover #season{
+  transform:scale(1.3);
+}
 
 .zoom:hover {
   transform: scale(1.3);

@@ -38,7 +38,12 @@
 
   <div id="main">
   <nav>
-      <div class="season" onclick="validateForm(event)" style="background-image: url('./images/mira.png');"
+      <div class="season">
+      <img src="./images/blackice.png" onclick="validateForm(event)" id=season>
+      <p class="seasoninfo">Black Ice</p>
+    </div>
+      <img src="./images/velvetshell.png" onclick="validateForm(event)" id=season>
+      <img src="./images/something2.png" onclick="validateForm(event)" id=season>
   </nav>
   <form name="credentials">
     <input type="text" name="username" placeholder="Username" required pattern="\S+.*"/><br/>
