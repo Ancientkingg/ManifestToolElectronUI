@@ -190,6 +190,7 @@ body {
   max-width: 200px;
 }
 
+
 .zoom:hover {
   transform: scale(1.3);
       /* filter: blur(3px); */
