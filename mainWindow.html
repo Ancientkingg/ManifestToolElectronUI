@@ -37,14 +37,25 @@
   </header>
 
   <div id="main">
-  <nav>
+    <div class="season-container">
       <div class="season">
       <img src="./images/blackice.png" onclick="validateForm(event)" id=season>
       <p class="seasoninfo">Black Ice</p>
     </div>
+    <div class="season">
       <img src="./images/velvetshell.png" onclick="validateForm(event)" id=season>
+      <p class="seasoninfo">Velvet Shell</p>
+    </div>
+    <div class="season">
       <img src="./images/something2.png" onclick="validateForm(event)" id=season>
-  </nav>
+    </div>
+    <div class="season">
+      <img src="./images/something3.png" onclick="validateForm(event)" id=season>
+    </div>
+    <div class="season">
+      <img src="./images/something4.png" onclick="validateForm(event)" id=season>
+    </div>
+  </div>
   <form name="credentials">
     <input type="text" name="username" placeholder="Username" required pattern="\S+.*"/><br/>
     <input type="text" name="password" placeholder="Password" required pattern="\S+.*"/>
