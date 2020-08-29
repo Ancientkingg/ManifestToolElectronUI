@@ -221,6 +221,10 @@ body {
   padding: 1px;
 }
 
+.season:active #season {
+  transform:scale(1.5);
+}
+
 input[type=text] {
   width: 11.8%;
   padding: 12px 20px;
