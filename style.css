@@ -343,10 +343,42 @@ input[type=text]:hover {
 }
 
 .customseason {
-  color: red;
-  position:relative;
-  left: 200px;
-  bottom: 115px;
-  width: 100px;
-  height: 100px;
+  background-color: black;
+  border: 1.5px solid green;
+  font-family: 'Consolas';
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: green;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-stretch: extra-condensed;
+  transition: background-color 200ms, color 200ms, padding 200ms;
+  position: relative;
+  left: 22%;
+  bottom: 116px;
+}
+.customseason:hover{
+  color: black;
+  text-decoration: none;
+  background-color: green;
+  padding: 12px 20px;
+}
+
+.addseason {
+  width: 250px;
+  height: 200px;
+  border: 3px solid green;
+  position: relative;
+  left: 720px;
+  bottom: 523px;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.addseasonbutton {
+  position: relative;
+  top: 250px;
+  margin: 0 auto;
+  background-color: green;
 }
