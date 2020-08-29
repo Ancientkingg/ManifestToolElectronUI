@@ -341,3 +341,12 @@ input[type=text]:hover {
 .season:hover .seasontooltip {
   opacity: 1;
 }
+
+.customseason {
+  color: red;
+  position:relative;
+  left: 200px;
+  bottom: 115px;
+  width: 100px;
+  height: 100px;
+}
