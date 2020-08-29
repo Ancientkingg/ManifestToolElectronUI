@@ -250,3 +250,40 @@ input[type=text]:hover {
   font-weight: 400;
   font-family: "Consolas";
 }
+
+.downloadbutton {
+  color: green;
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+  background-color: black;
+  padding: 5px;
+  font-size: 20px;
+  font-family: Consolas;
+  font-weight: bolder;
+  border-radius: 20px;
+  transition: padding 500ms, width 200ms, background-color 300ms, color 300ms, border 300ms, font-size 300ms;
+  outline: none;
+  width: 50%;
+  margin:0 auto;
+  display:block;
+  border: 2px solid green;
+  font-stretch: ultra-expanded;
+  font-size: 31px;
+}
+
+.downloadbutton:hover {
+  padding: 10px;
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+  background-color: green;
+  width: 100%;
+}
+
+.downloadbutton:focus {
+  outline: none;
+  background-color: greenyellow;
+  width: 100%;
+  border: 2px solid greenyellow;
+  }
