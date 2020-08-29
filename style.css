@@ -182,8 +182,8 @@ body {
 
 .season-container {
   display: grid;
-  grid-template-columns: 120px 120px 120px 120px;
-  grid-template-rows: 120px 120px 120px 120px;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px;
+  grid-template-rows: 120px 120px 120px;
 }
 .season {
   width: 150px;
@@ -222,7 +222,7 @@ body {
 }
 
 input[type=text] {
-  width: 11.8%;
+  width: 12%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -233,6 +233,7 @@ input[type=text] {
   transition: width 800ms;
   outline: none;
   color: green;
+  border: 1.5px inset green;
   font-family: "Consolas";
   font-weight: 400;
 }
@@ -253,8 +254,9 @@ input[type=text]:hover {
 
 .downloadbutton {
   color: green;
-  position: sticky;
-  bottom: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 1%;
   text-align: center;
   background-color: black;
   padding: 5px;
@@ -266,6 +268,10 @@ input[type=text]:hover {
   outline: none;
   width: 50%;
   margin:0 auto;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
   display:block;
   border: 2px solid green;
   font-stretch: ultra-expanded;
@@ -278,7 +284,7 @@ input[type=text]:hover {
   text-decoration: none;
   color: black;
   background-color: green;
-  width: 100%;
+  width: 98%;
 }
 
 .downloadbutton:focus {
@@ -305,4 +311,33 @@ input[type=text]:hover {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(0, 184, 0); 
   border-radius: 10px;
+}
+
+.season .seasontooltip {
+  opacity: 0;
+  transition: opacity 600ms;
+  width: 200px;
+  background-color: black;
+  color: #39ff14;
+  font-family: Consolas;
+  border: 2px solid green;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.season .seasontooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -28px;
+  border: 10px solid #39ff14;
+  border-color: transparent #39ff14 transparent transparent;
+}
+.season:hover .seasontooltip {
+  opacity: 1;
 }
