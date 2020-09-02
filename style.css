@@ -386,3 +386,31 @@ input[type=text]:hover {
   margin: 0 auto;
   background-color: green;
 }
+
+.customseasons{
+  font-family: Consolas;
+  color: green;
+  font-weight: 1000;
+  font-size: 50px;
+  text-align: center;
+  top: 50px;
+  position: relative;
+  border: 2px solid green;
+  border-radius: 15px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.manifestid{
+  font-family: Consolas;
+  color: green;
+  font-weight: 1000;
+  font-size: 20px;
+  text-align: center;
+  top: 90px;
+  position: relative;
+  border-radius: 15px;
+  width: 80%;
+  left: -45px;
+  margin: 0 auto;
+}

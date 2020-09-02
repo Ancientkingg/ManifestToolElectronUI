@@ -2,6 +2,7 @@ var is = require("electron-is");
 function setStatus(msg)    { getStatus().innerHTML = msg; };
 var username;
 var password;
+var fs = require('fs');
 
 
 function validateForm(event) {
