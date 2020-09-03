@@ -129,11 +129,13 @@
       <span class="seasontooltip" style="left:750px;top:288px;"><strong style="color: red">Event: </strong>Upcoming</br><u style="color:blue;font-weight: 800">New Operators</u></br>Zero</span>
     </div>
   </div>
-  <form name="credentials">
-    <input type="text" name="username" placeholder="Username" required pattern="\S+.*"/><br/>
-    <input type="text" name="password" placeholder="Password" required pattern="\S+.*"/>
+  <form name="credentials" class="credentialsform">
+    <input type="text" class="credentials" name="username" placeholder="Username" required pattern="\S+.*"/><br/>
+    <input type="text" class="credentials" name="password" placeholder="Password" required pattern="\S+.*"/>
+    <input type="text" class="manifestid" name="manifest" placeholder="Type in your Manifest ID" required pattern="\S+.*"/><br/>
+    <a href="customseason.html" class="customseason">Add manifest</a>
   </form>
-  <a href="customseason.html" class="customseason">Add your own manifest</a>
+  
   <a href="frontmenu.html" class="downloadbutton">Download</a>
 </div>
   <script src="./cmd.js"></script>

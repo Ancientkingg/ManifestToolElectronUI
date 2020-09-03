@@ -225,8 +225,8 @@ body {
   transform:scale(1.5);
 }
 
-input[type=text] {
-  width: 12%;
+.credentials {
+  width: 115px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -242,12 +242,12 @@ input[type=text] {
   font-weight: 400;
 }
 
-input[type=text]:not(:placeholder-shown){
-  width: 20%;
+.credentials:not(:placeholder-shown){
+  width: 160px;
 }
 
-input[type=text]:hover {
-  width: 20%;
+.credentials:hover {
+  width: 160px;
 }
 
 ::placeholder {
@@ -337,7 +337,7 @@ input[type=text]:hover {
   content: " ";
   position: absolute;
   top: 50%;
-  right: 100%; /* To the left of the tooltip */
+  right: 100%;
   margin-top: -28px;
   border: 10px solid #39ff14;
   border-color: transparent #39ff14 transparent transparent;
@@ -347,26 +347,27 @@ input[type=text]:hover {
 }
 
 .customseason {
-  background-color: black;
-  border: 1.5px solid green;
   font-family: 'Consolas';
-  font-size: 20px;
+  border: 1.5px inset green;
+  font-weight: 400;
   text-align: center;
   text-decoration: none;
   color: green;
   border-radius: 20px;
-  padding: 5px 10px;
-  font-stretch: extra-condensed;
-  transition: background-color 200ms, color 200ms, padding 200ms;
+  padding: 12px 20px;
+  transition: background-color 200ms, color 200ms, padding 200ms, width 400ms;
+  width: 260px;
+  float:right;
+  bottom: 57.5px;
   position: relative;
-  left: 22%;
-  bottom: 116px;
+  background: rgb(22, 22, 22);
 }
 .customseason:hover{
   color: black;
   text-decoration: none;
   background-color: green;
   padding: 12px 20px;
+  width: 300px;
 }
 
 .addseason {
@@ -399,18 +400,42 @@ input[type=text]:hover {
   border-radius: 15px;
   width: 80%;
   margin: 0 auto;
+
 }
 
 .manifestid{
-  font-family: Consolas;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  /* background: rgb(76,255,0);
+  background: linear-gradient(90deg, rgba(76,255,0,1) 0%, rgba(0,212,255,1) 100%); */
+  background: rgb(22, 22, 22);
+  transition: width 800ms;
+  outline: none;
   color: green;
-  font-weight: 1000;
-  font-size: 20px;
-  text-align: center;
-  top: 90px;
-  position: relative;
-  border-radius: 15px;
-  width: 80%;
-  left: -45px;
-  margin: 0 auto;
+  border: 1.5px inset green;
+  font-family: "Consolas";
+  font-weight: 400;
+  position: relative; 
+  width: 260px;
+  float:right;
+  bottom: 66.5px;
+}
+
+.manifestid:not(:placeholder-shown){
+  width: 300px;
+}
+
+.manifestid:hover {
+  width: 300px;
+}
+
+.credentialsform {
+  display: block;
+  border: 2px outset green;
+  border-radius: 25px;
+  padding: 15px;
+  width: 500px;
+  height: 167.5px;
 }
