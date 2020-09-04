@@ -3,6 +3,7 @@ function setStatus(msg)    { getStatus().innerHTML = msg; };
 var username;
 var password;
 var fs = require('fs');
+var season;
 
 
 function validateForm(event) {
@@ -34,3 +35,15 @@ function startDownload() {
       }
     });
 };
+
+function selectedButton(clicked_src, clicked_class) {
+  var str = clicked_src;
+  str = str.substring(str.lastIndexOf("/") + 1);
+  str = str.slice(0, -4);
+  console.log(str);
+  // if (selected.style.transform === "scale(2)") {
+  //   selected.style.transform = "scale(1)";
+  // } else {
+  //   selected.style.transform = "scale(2)";
+  // }
+}
