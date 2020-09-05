@@ -45,11 +45,13 @@ function selectedButton(clicked_src, clicked_class, clicked_element) {
     clicked_element.className = " seasonbutton";
     clicked_element.style.border = "0px solid black";
     clicked_element.style.borderRadius = "0px";
+    clicked_element.style.backgroundColor = "transparent";
   } else {
     clicked_element.style.transform = "scale(1.5)";
     clicked_element.className += " selected";
     clicked_element.style.border = "3px solid green";
-    clicked_element.style.borderRadius = "50px";
+    clicked_element.style.borderRadius = "20px";
+    clicked_element.style.backgroundColor = "green";
   }
   document.querySelectorAll('.seasonbutton:not(.selected)').forEach(function(e) {
       console.log(e);
@@ -57,6 +59,7 @@ function selectedButton(clicked_src, clicked_class, clicked_element) {
       e.className = " seasonbutton";
       e.style.border = "0px solid black";
       e.style.borderRadius = "0px";
+      e.style.backgroundColor = "transparent";
   });
   var str = clicked_src;
   str = str.substring(str.lastIndexOf("/") + 1);
