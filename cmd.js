@@ -3,7 +3,7 @@ function setStatus(msg)    { getStatus().innerHTML = msg; };
 var username;
 var password;
 var fs = require('fs');
-var season;
+var str;
 
 
 function validateForm(event) {
@@ -39,29 +39,30 @@ function startDownload() {
 function selectedButton(clicked_src, clicked_class, clicked_element) {
   document.querySelectorAll('.selected').forEach(function(e) {
     e.className = "seasonbutton"
-});
+  });
+  str = clicked_src;
+  str = str.substring(str.lastIndexOf("/") + 1);
+  str = str.slice(0, -4);
   if (clicked_element.style.transform === "scale(1.5)") {
     clicked_element.style.transform = "scale(1)";
     clicked_element.className = " seasonbutton";
     clicked_element.style.border = "0px solid black";
     clicked_element.style.borderRadius = "0px";
     clicked_element.style.backgroundColor = "transparent";
+    console.log("nothing selected");
   } else {
     clicked_element.style.transform = "scale(1.5)";
     clicked_element.className += " selected";
     clicked_element.style.border = "3px solid green";
     clicked_element.style.borderRadius = "20px";
     clicked_element.style.backgroundColor = "green";
+    console.log(str + " selected");
   }
   document.querySelectorAll('.seasonbutton:not(.selected)').forEach(function(e) {
-      console.log(e);
       e.style.transform = "scale(1)";
       e.className = " seasonbutton";
       e.style.border = "0px solid black";
       e.style.borderRadius = "0px";
       e.style.backgroundColor = "transparent";
   });
-  var str = clicked_src;
-  str = str.substring(str.lastIndexOf("/") + 1);
-  str = str.slice(0, -4);
 }
