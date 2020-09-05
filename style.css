@@ -192,7 +192,7 @@ body {
 
 .seasonbutton {
   margin: auto;
-  transition:transform 300ms;
+  transition:transform 300ms, border 500ms, border-radius 300ms;
   border-color: rgba(0, 255, 0, 255);
   width: 75px;
   height: 64px;
@@ -208,7 +208,7 @@ body {
   width: 120px;
   color: rgba(0, 0, 0, 0);
   transition: color 400ms, background-color 400ms;
-  background-color: rgba(0,0,0,0);
+  background-color: transparent;
   text-align: center;
   border-radius: 20px;
   position: relative;
@@ -218,7 +218,7 @@ body {
 
 .season:hover .seasoninfo{
   color: green;
-  background-color: #000000;
+  background-color: transparent;
 }
 
 .season:hover .seasonbutton{

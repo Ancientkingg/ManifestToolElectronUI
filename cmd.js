@@ -36,14 +36,29 @@ function startDownload() {
     });
 };
 
-function selectedButton(clicked_src, clicked_class) {
+function selectedButton(clicked_src, clicked_class, clicked_element) {
+  document.querySelectorAll('.selected').forEach(function(e) {
+    e.className = "seasonbutton"
+});
+  if (clicked_element.style.transform === "scale(1.5)") {
+    clicked_element.style.transform = "scale(1)";
+    clicked_element.className = " seasonbutton";
+    clicked_element.style.border = "0px solid black";
+    clicked_element.style.borderRadius = "0px";
+  } else {
+    clicked_element.style.transform = "scale(1.5)";
+    clicked_element.className += " selected";
+    clicked_element.style.border = "3px solid green";
+    clicked_element.style.borderRadius = "50px";
+  }
+  document.querySelectorAll('.seasonbutton:not(.selected)').forEach(function(e) {
+      console.log(e);
+      e.style.transform = "scale(1)";
+      e.className = " seasonbutton";
+      e.style.border = "0px solid black";
+      e.style.borderRadius = "0px";
+  });
   var str = clicked_src;
   str = str.substring(str.lastIndexOf("/") + 1);
   str = str.slice(0, -4);
-  console.log(str);
-  // if (selected.style.transform === "scale(2)") {
-  //   selected.style.transform = "scale(1)";
-  // } else {
-  //   selected.style.transform = "scale(2)";
-  // }
 }
